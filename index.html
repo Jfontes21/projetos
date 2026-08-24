@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rick and Morty - Catálogo</title>
+  <link rel="stylesheet" href="styles.css?v=1">
+</head>
+<body>
+  <div class="page">
+    <header class="header">
+      <span class="header__badge">Multiverso C-137</span>
+      <h1>Catálogo de Personagens</h1>
+      <p>Explore personagens da Rick and Morty API com filtros de campos e paginação.</p>
+    </header>
+
+    <section class="controls">
+      <div class="controls__row">
+        <input type="text" id="searchInput" placeholder="Buscar por nome ou ID">
+        <button id="btn-go" class="btn btn--primary" type="button">Buscar</button>
+        <button id="btn-reset" class="btn btn--ghost" type="button">Resetar</button>
+      </div>
+
+      <div class="controls__row">
+        <label><input type="checkbox" id="name" name="name" checked> Nome</label>
+        <label><input type="checkbox" id="status" name="status" checked> Status</label>
+        <label><input type="checkbox" id="species" name="species" checked> Espécie</label>
+        <label><input type="checkbox" id="gender" name="gender"> Gênero</label>
+        <label><input type="checkbox" id="origin" name="origin"> Origem</label>
+        <label><input type="checkbox" id="episode" name="episode"> Episódios</label>
+      </div>
+    </section>
+
+    <p id="status" class="status" aria-live="polite"></p>
+
+    <section id="catalog" class="catalog" aria-label="Catálogo de personagens"></section>
+
+    <nav id="pagination" class="pagination" aria-label="Paginação"></nav>
+  </div>
+
+  <script src="script.js?v=1"></script>
+</body>
+</html>
